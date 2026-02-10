@@ -84,14 +84,14 @@
     </div>
 
     <!-- 🎵 BEÁGYAZOTT ZENE -->
-    <audio id="bgMusic" >
+    <audio id="Music" >
         <source src="Está Dañada.mp3" type="audio/mpeg"> 
     </audio>
 
     <script>
         const yesBtn = document.getElementById("yesBtn");
         const noBtn = document.getElementById("noBtn");
-        const bgMusic = document.getElementById("bgMusic");
+        const Music = document.getElementById("Music");
         
         let yesScale = 1;
         let noScale = 1;
@@ -121,7 +121,7 @@
                 <p style="font-size:1.5rem;">Nagyon Helyes!🤪🌹</p>
             `;
 
-            bgMusic.play();
+            Music.play();
             setInterval(createHeart, 200);
         });
     </script>
