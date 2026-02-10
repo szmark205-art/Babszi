@@ -84,7 +84,7 @@
     </div>
 
     <!-- 🎵 BEÁGYAZOTT ZENE -->
-    <audio id="bgMusic">
+    <audio id="bgMusic" preload="auto" >
         <source src="Está Dañada.mp3" type="audio/mpeg"> 
     </audio>
 
@@ -121,7 +121,10 @@
                 <p style="font-size:1.5rem;">Nagyon Helyes!🤪🌹</p>
             `;
 
-            bgMusic.play();
+            bgMusic.play().catch(err => {
+                console.log("Nem sikerült automatikusan lejátszani a zenét:", err);
+            });
+            alert("Zene elindult! 🎵"); 
             setInterval(createHeart, 200);
         });
     </script>
